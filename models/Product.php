@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '/models/Category.php';
+    require_once __DIR__ . '/Category.php';
 
     class Product {
         protected $name;
@@ -7,34 +7,25 @@
         public Category $category;
 
         public function __construct($name, $price, Category $category) {
-            $this -> name = $name
-            $this -> price = $price
-            $this -> category = $category
+            $this -> setName($name);
+            $this -> setPrice($price);
+            $this -> category = $category;
         }
 
         public function getName() {
-            return $this->name;
+            return $this -> name;
         }
 
-        public function getDirector() {
-            return $this->director;
+        public function setName($name) {
+            return $this -> name = $name;
         }
 
-        public function getYear() {
-            return $this->year;
+        public function getPrice() {
+            return $this -> price;
         }
 
-        public function getGenres() {
-            return implode(', ', $this->genre);
-        }
-
-        public function getFullInfo() {
-            $str = "<div><h2>" . $this->getName() . "</h2>"
-                    . $this->getDirector() . "<br>"
-                    . $this->getGenres() . "<br>"
-                    . $this->getYear() . "<br></div>";
-
-            return $str;
+        public function setPrice($price) {
+            return $this -> price = $price;
         }
     }
 ?>
