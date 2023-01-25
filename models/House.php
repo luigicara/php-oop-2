@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/Product.php';
 
-class Game extends Product{
+class House extends Product{
     private array $materials;
     private $size;
 
